@@ -14,6 +14,7 @@ import CreatePost from './views/CreatePost/CreatePost';
 import Dashboard from './views/Dashboard/Dashboard';
 import Search from './views/Search/Search';
 import Post from './views/Post/Post';
+import EditPost from './views/EditPost/EditPost';
 
 function App() {
   const [user, setUser] = useState(undefined)
@@ -55,6 +56,10 @@ function App() {
               <Route
                 path="/dashboard"
                 element={user ? <Dashboard /> : <Navigate to="/login" />}
+              />
+              <Route
+                path="/posts/edit/:id"
+                element={user ? <EditPost /> : <Navigate to="/login" />}
               />
             </Routes>
           </div>
