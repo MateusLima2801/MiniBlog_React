@@ -1,5 +1,15 @@
 .post_container{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.post_container .body{
+    width: 80%;
+    max-width: 1200px;
+    
 }
 
 .post_container h3{
